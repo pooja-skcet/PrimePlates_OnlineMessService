@@ -1,0 +1,97 @@
+.custom-order-page01 {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+.custom-order-page01 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group01 {
+  margin-bottom: 15px;
+}
+
+.form-group01 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group01 select,
+.form-group01 input[type="text"],
+.form-group01 input[type="number"],
+.form-group01 input[type="date"],
+.form-group01 input[type="time"],
+.form-group01 input[type="radio"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.form-group01 input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.error01 {
+  color: red;
+  font-size: 12px;
+}
+
+.bt01 {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.bt01:hover {
+  background-color: #677169;
+}
+
+.header01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+}
+
+.header01 h1 {
+  margin: 0;
+}
+
+.navigation01 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation01 a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.cont1 {
+  background-color: #f0b997;
+}

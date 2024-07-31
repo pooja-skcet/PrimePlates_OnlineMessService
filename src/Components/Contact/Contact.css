@@ -1,0 +1,92 @@
+.contact-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+     background-color: #f0b997;
+  }
+  
+  .address-section,
+  .contact-section,
+  .map-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+  }
+  
+  .address-section h2,
+  .contact-section h2,
+  .map-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .address-section p,
+  .contact-section p {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    border: none;
+  }
+  
+  .reviews-section {
+    margin-top: 20px;
+  }
+  
+  .reviews-section h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .reviews-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .reviews-section li {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  .header8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+  }
+ 
+  .header8 h1 {
+    margin: 0;
+  }
+  
+  .navigation8 a {
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation8 a:hover {
+    background-color: #333;
+    color: white;
+  }

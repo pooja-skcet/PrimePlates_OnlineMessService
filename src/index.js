@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Home from './Components/Home/Home'
+import Homepage from './Components/Home/Homepage'
+import Navigate from './Components/Navigate/Navigate';
+import NewHome from './Components/NewHome/NewHome'
+import Services from './Components/Services/Services';
+import Package from './Components/Package/Package';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   <Navigate/>
+   
   </React.StrictMode>
 );
 
