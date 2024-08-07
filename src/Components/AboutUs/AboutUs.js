@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
 import img from '../Home/HomeImages/home.jpg';
-
+import Footer from '../Footer';
 const AboutUs = () => {
   return (
     <div>
@@ -59,7 +59,10 @@ const AboutUs = () => {
           Email: primeplates@gmail.com
         </b>
       </div>
+    
     </div>
+    <div>
+    <Footer/></div>
     </div>
   );
 };

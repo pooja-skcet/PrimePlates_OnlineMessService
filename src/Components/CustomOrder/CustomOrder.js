@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CustomOrder.css';
-
+import Footer from '../Footer'
 import { useNavigate } from 'react-router-dom';
 const CustomOrder = () => {
 
@@ -209,6 +209,9 @@ const CustomOrder = () => {
         <button type="submit" className="bt01" onClick={handleOrder}>Proceed to Payment</button>
       </form>
     </div>
+    </div>
+    <div>
+    <Footer/>
     </div>
     </div>
   );

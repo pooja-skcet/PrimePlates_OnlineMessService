@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import MenuItem from './MenuItem';
 import './WeekMenu.css';
-
+import Footer from '../Footer';
 const WeekMenu = () => {
   const [vegOnly, setVegOnly] = useState(false);
   const [selectedDay, setSelectedDay] = useState('29 Mon');
@@ -48,7 +48,7 @@ const WeekMenu = () => {
           veg: true,
         },
         {
-          name: 'North Indian Prenium (Veg)',
+          name: 'North Indian Premium (Veg)',
           type: 'Premium',
           price: '₹170.00',
           description: 'Plain Rice, Lehsuni Dal, Aloo Matar Rassedar',
@@ -800,7 +800,9 @@ const WeekMenu = () => {
         ))}
       </div>
       </div>
-      
+      <div>
+      <Footer/>
+      </div>
     </div>
     
   );

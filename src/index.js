@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Components/Home/Home'
@@ -8,10 +8,11 @@ import Navigate from './Components/Navigate/Navigate';
 import NewHome from './Components/NewHome/NewHome'
 import Services from './Components/Services/Services';
 import Package from './Components/Package/Package';
+import Footer from './Components/Footer'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Navigate/>
+  <Navigate/>
    
   </React.StrictMode>
 );

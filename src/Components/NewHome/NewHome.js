@@ -7,6 +7,7 @@ import i4 from './Images/platinum.jpeg'
 import i5 from './Images/silver.webp'
 import i6 from './Images/gold.jpeg'
 import { useNavigate } from 'react-router-dom';
+import WhyChooseUs from '../Home/WhyChooseUs';
 const NewHome = () => {
   const nav=useNavigate();
 
@@ -88,6 +89,9 @@ const NewHome = () => {
           <a href="/Package" className="more-info0">More Info</a>
         </div>
       </section>
+      <div className="banner">
+      <WhyChooseUs/>
+      </div>
       <footer className="footer0">
         <div className="footer-content0">
           <p>We're ready when you are </p>

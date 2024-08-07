@@ -16,6 +16,7 @@ import img12 from './PackageImages/Chapati.avif'
 import img13 from './PackageImages/Chicken Curry.jpg'
 import img14 from './PackageImages/Vegetable Pulao.webp'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer'
 const Package = () => {
   const nav=useNavigate();
 
@@ -124,6 +125,9 @@ const Package = () => {
       <button onClick={handleMenu} className="btn2">More Details</button>
       </div>
     </div>
+   <div>
+   <Footer/>
+   </div>
     </div>
   );
 };
