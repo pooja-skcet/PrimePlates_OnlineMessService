@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './CustomOrder.css';
-import Footer from '../Footer'
+import Footer from '../Footer';
 import { useNavigate } from 'react-router-dom';
+import MealSelection from './MealSelection';
+
 const CustomOrder = () => {
+  const nav = useNavigate();
 
-  const nav=useNavigate();
+  const handleOrder = () => {
+    nav("/Order");
+  };
 
-  
-  const handleOrder = () =>{
-    nav("/Order")
-  }
-  
   const [order, setOrder] = useState({
     breakfast: '',
     lunch: '',
@@ -63,7 +63,6 @@ const CustomOrder = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Process the order submission here
       console.log('Order submitted:', order);
     }
   };
@@ -78,141 +77,104 @@ const CustomOrder = () => {
   };
 
   return (
-    <div>
-    <div>
-    <header className="header01">
-      <h2>PrimePlates</h2>
-      <nav className="navigation01">
-      <a href="/Home">Home</a>
-      <a href="/AboutUs">About Us</a>
+    <div className="custom-order-container">
+      <header className="header01">
+        <h2>PrimePlates</h2>
+        <nav className="navigation01">
+          <a href="/Home">Home</a>
+          <a href="/AboutUs">About Us</a>
           <a href="/Package">Packages</a>
-          
           <a href="/WeekMenu">Our Menu</a>
           <a href="/Contact">Contact</a>
-      </nav>
-    </header>
-    </div>
-    <div className="cont1">
-    <div className="custom-order-page01">
-      <h2>Custom Order Page</h2>
-      <form onSubmit={handleSubmit}>
-      <div className="form-group01">
-      <label>Veg/Non-Veg:</label>
-      <div>
-        <input
-          type="radio"
-          name="isVeg"
-          value="veg"
-          checked={order.isVeg === 'veg'}
-          onChange={handleChange}
-        /> Veg
-        <input
-          type="radio"
-          name="isVeg"
-          value="nonVeg"
-          checked={order.isVeg === 'nonVeg'}
-          onChange={handleChange}
-        /> Non-Veg
+        </nav>
+      </header>
+      <div className="cont1">
+        <div className="custom-order-page01">
+          <h2>Custom Order Page</h2>
+          <div className="selection-card">
+            <h3>Veg or Non-Veg</h3>
+            <div className="options">
+              <button
+                className={`option-btn ${order.isVeg === 'veg' ? 'selected' : ''}`}
+                onClick={() => setOrder({ ...order, isVeg: 'veg' })}
+              >
+                Veg
+              </button>
+              <button
+                className={`option-btn ${order.isVeg === 'nonVeg' ? 'selected' : ''}`}
+                onClick={() => setOrder({ ...order, isVeg: 'nonVeg' })}
+              >
+                Non-Veg
+              </button>
+            </div>
+            {errors.isVeg && <span className="error01">{errors.isVeg}</span>}
+          </div>
+
+          <MealSelection meal="Breakfast" items={getItems('breakfast')} selected={order.breakfast} onSelect={(item) => setOrder({ ...order, breakfast: item })} error={errors.breakfast} />
+          <MealSelection meal="Lunch" items={getItems('lunch')} selected={order.lunch} onSelect={(item) => setOrder({ ...order, lunch: item })} error={errors.lunch} />
+          <MealSelection meal="Dinner" items={getItems('dinner')} selected={order.dinner} onSelect={(item) => setOrder({ ...order, dinner: item })} error={errors.dinner} />
+
+          <div className="selection-card">
+            <h3>Order Count</h3>
+            <input
+              type="number"
+              name="orderCount"
+              value={order.orderCount}
+              onChange={handleChange}
+              min="1"
+            />
+          </div>
+
+          <div className="selection-card">
+            <h3>Address</h3>
+            <input
+              type="text"
+              name="address"
+              value={order.address}
+              onChange={handleChange}
+              placeholder="Enter your delivery address"
+            />
+            {errors.address && <span className="error01">{errors.address}</span>}
+          </div>
+
+          <div className="selection-card">
+            <h3>Date</h3>
+            <input
+              type="date"
+              name="date"
+              value={order.date}
+              onChange={handleChange}
+            />
+            {errors.date && <span className="error01">{errors.date}</span>}
+          </div>
+
+          <div className="selection-card">
+            <h3>Time</h3>
+            <input
+              type="time"
+              name="time"
+              value={order.time}
+              onChange={handleChange}
+            />
+            {errors.time && <span className="error01">{errors.time}</span>}
+          </div>
+
+          <div className="selection-card">
+            <h3>City</h3>
+            <input
+              type="text"
+              name="city"
+              value={order.city}
+              onChange={handleChange}
+              placeholder="Enter your city"
+            />
+            {errors.city && <span className="error01">{errors.city}</span>}
+          </div>
+
+          <button type="button" className="bt01" onClick={handleSubmit}>Proceed to Payment</button>
+        </div>
       </div>
-      {errors.isVeg && <span className="error01">{errors.isVeg}</span>}
-    </div>
-        <div className="form-group01">
-          <label>Breakfast:</label>
-          <select name="breakfast" value={order.breakfast} onChange={handleChange}>
-            <option value="">Select an item</option>
-            {getItems('breakfast').map((item) => (
-              <option key={item} value={item}>{item}</option>
-            ))}
-          </select>
-          {errors.breakfast && <span className="error01">{errors.breakfast}</span>}
-        </div>
-
-        <div className="form-group01">
-          <label>Lunch:</label>
-          <select name="lunch" value={order.lunch} onChange={handleChange}>
-            <option value="">Select an item</option>
-            {getItems('lunch').map((item) => (
-              <option key={item} value={item}>{item}</option>
-            ))}
-          </select>
-          {errors.lunch && <span className="error01">{errors.lunch}</span>}
-        </div>
-
-        <div className="form-group01">
-          <label>Dinner:</label>
-          <select name="dinner" value={order.dinner} onChange={handleChange}>
-            <option value="">Select an item</option>
-            {getItems('dinner').map((item) => (
-              <option key={item} value={item}>{item}</option>
-            ))}
-          </select>
-          {errors.dinner && <span className="error01">{errors.dinner}</span>}
-        </div>
-
-       
-
-        <div className="form-group01">
-          <label>Order Count:</label>
-          <input
-            type="number"
-            name="orderCount"
-            value={order.orderCount}
-            onChange={handleChange}
-            min="1"
-          />
-        </div>
-
-        <div className="form-group01">
-          <label>Address:</label>
-          <input
-            type="text"
-            name="address"
-            value={order.address}
-            onChange={handleChange}
-          />
-          {errors.address && <span className="error01">{errors.address}</span>}
-        </div>
-
-        <div className="form-group01">
-          <label>Date:</label>
-          <input
-            type="date"
-            name="date"
-            value={order.date}
-            onChange={handleChange}
-          />
-          {errors.date && <span className="error01">{errors.date}</span>}
-        </div>
-
-        <div className="form-group01">
-          <label>Time:</label>
-          <input
-            type="time"
-            name="time"
-            value={order.time}
-            onChange={handleChange}
-          />
-          {errors.time && <span className="error01">{errors.time}</span>}
-        </div>
-
-        <div className="form-group01">
-          <label>City:</label>
-          <input
-            type="text"
-            name="city"
-            value={order.city}
-            onChange={handleChange}
-          />
-          {errors.city && <span className="error01">{errors.city}</span>}
-        </div>
-
-        <button type="submit" className="bt01" onClick={handleOrder}>Proceed to Payment</button>
-      </form>
-    </div>
-    </div>
-    <div>
-    <Footer/>
-    </div>
+      <Footer />
     </div>
   );
 };

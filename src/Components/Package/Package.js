@@ -22,7 +22,7 @@ const Package = () => {
 
   
   const handleMenu = () =>{
-    nav("/WeekMenu")
+    nav("/Order")
   }
   const [packageMode, setPackageMode] = useState('pack1');
   const [filter, setFilter] = useState('all');
@@ -69,7 +69,7 @@ const Package = () => {
     if (filter === 'veg' && item.veg) return true;
     if (filter === 'non-veg' && !item.veg) return true;
   
-    if (filter === 'reviews' && item.reviews >= 50) return true;
+   
     if (filter === 'rating' && item.rating >= 4.5) return true;
     return false;
   });
@@ -97,14 +97,15 @@ const Package = () => {
       <div className="package-selector2">
         <button onClick={() => setPackageMode('pack1')} className={packageMode === 'pack1' ? 'active' : ''}>Premium Package</button>
         <button onClick={() => setPackageMode('pack2')} className={packageMode === 'pack2' ? 'active' : ''}>Standard Package</button>
-        <button onClick={() => setPackageMode('pack3')} className={packageMode === 'pack3' ? 'active' : ''}>Lite Package</button>
+        <button onClick={() => setPackageMode('pack3')} className={packageMode === 'pack3' ? 'active' : ''}>Health Package</button>
+        <button onClick={() => setPackageMode('pack3')} className={packageMode === 'pack3' ? 'active' : ''}>Student Package</button>
       </div>
       <div className="filter-selector2">
         <button onClick={() => setFilter('all')} className={filter === 'all' ? 'active' : ''}>All</button>
         <button onClick={() => setFilter('veg')} className={filter === 'veg' ? 'active' : ''}>Veg</button>
         <button onClick={() => setFilter('non-veg')} className={filter === 'non-veg' ? 'active' : ''}>Non-Veg</button>
         
-        <button onClick={() => setFilter('reviews')} className={filter === 'reviews' ? 'active' : ''}>Reviews > 50</button>
+        
         <button onClick={() => setFilter('rating')} className={filter === 'rating' ? 'active' : ''}>Rating > 4.5</button>
       </div>
       <div className="menu-items2">
@@ -114,7 +115,7 @@ const Package = () => {
               <img src={item.image} alt={item.name} className="menu-item-image2" />
               <h2>{item.name}</h2>
               <p>{item.description}</p>
-              <p className="price2">{item.price}</p>
+             
               
               <p>Reviews: {item.reviews}</p>
               <p>Rating: {item.rating}</p>
@@ -122,7 +123,7 @@ const Package = () => {
           </div>
         ))}
       </div>
-      <button onClick={handleMenu} className="btn2">More Details</button>
+      <button onClick={handleMenu} className="btn2">Order Now</button>
       </div>
     </div>
    <div>

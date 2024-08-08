@@ -1,135 +1,36 @@
 /* src/components/MenuItem.css */
 .menu-item {
-    border: 1px solid #1f1d1d;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    text-align: left;
-    width: 200px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .menu-item h3 {
-    margin: 0 0 8px;
-  }
-  
-  .menu-item .type {
-    font-weight: bold;
-    color: #ff6600;
-  }
-  
-  .menu-item .price {
-    color: #333;
-    margin: 8px 0;
-  }
-  
-  .menu-item .description {
-    color: #666;
-  }
-  
-  .menu-item .tag {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 2px 8px;
-    background-color: #e0f7fa;
-    color: #00796b;
-    border-radius: 4px;
-    font-size: 12px;
-  }
-  
-  /* src/components/MenuPage.css */
-  .menu-page {
-    text-align: center;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #ff6600;
-  }
-  
-  .header h1 {
-    margin: 0;
-  }
-  
-  .navigation a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .filters {
-    padding: 20px;
-  }
-  
-  .filter-button {
-    background-color: #ff6600;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .filter-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .filter-options button {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .filter-options button.active {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-  }
-  
-  .veg-toggle {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .veg-toggle label {
-    margin-right: 10px;
-  }
-  
-  .week-menu {
-    margin-top: 20px;
-  }
-  
-  .week-days {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .week-days button {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .week-days button.active {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-  }
-  
-  .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
+  border: 1px solid #1f1d1d;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  text-align: left;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.menu-item-details {
+  margin-top: 8px;
+}
+
+.menu-item-title {
+  margin: 0 0 8px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.menu-item-price {
+  color: #333;
+  margin: 8px 0;
+}
+
+.menu-item-description {
+  color: #666;
+}

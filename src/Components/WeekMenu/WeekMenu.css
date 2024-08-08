@@ -1,115 +1,155 @@
-/* src/components/WeekMenu.css */
+/* WeekMenu.css */
+
 .menu-page5 {
-    text-align: center;
-  }
-  
-  
-  .section5{
-    background-color: #e0dfda;
-  }
-  .header5 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-    background-color: white;
-    position: fixed;
-    top: 0; 
-    width: 100%; 
-    z-index: 1000;
-  }
- 
-  .header5 h1 {
-    margin: 0;
-  }
-  
-  .navigation5 a {
-    margin: 0 10px;
-    padding: 8px 12px;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .navigation5 a:hover {
-    background-color: #333;
-    color: white;
-  }
-  
-  .filters5 {
-    margin-top:40px;
-    padding: 20px;
-  }
-  
-  .filter-button5 {
-    background-color: #ff6600;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .filter-options5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .filter-options5 button {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background-color: white;
-  }
-  
-  .filter-options5 button.active {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-  }
-  
-  .veg-toggle5 {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .veg-toggle5 label {
-    margin-right: 10px;
-  }
-  
-  .week-menu5 {
-    margin-top: 20px;
-  }
-  
-  .week-days5 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .week-days5 button {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background-color: white;
-  }
-  
-  .week-days5 button.active {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-  }
-  
-  .menu-items5 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-   
-  }
-  
+  text-align: center;
+}
+
+.header5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.header5 h2 {
+  margin: 0;
+}
+
+.navigation5 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation5 a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.filters5 {
+  margin-top: 80px; /* Adjusted for fixed header */
+  padding: 20px;
+}
+
+.filter-button5 {
+  background-color: #ddd;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-options5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filter-options5 button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.filter-options5 button.active {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.veg-toggle5 {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.veg-toggle5 label {
+  margin-right: 10px;
+}
+
+.week-menu5 {
+  margin-top: 20px;
+}
+
+.week-days5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.week-days5 button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.week-days5 button.active {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.menu-items5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.menu-item5 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.menu-item5:hover {
+  transform: scale(1.05);
+}
+
+.menu-item5 img.menu-item-image5 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item5 h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.menu-item5 p {
+  margin: 5px 0;
+}
+
+.menu-item5 .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-item5 a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -28,11 +28,7 @@ const MenuItemDetails = () => {
         description: 'Savor the rich and aromatic flavors of our Chicken Biryani, a timeless classic that brings together tender chicken pieces, fragrant basmati rice, and a blend of traditional spices. Each mouthful is an exquisite journey through layers of spices, herbs, and perfectly cooked rice, all infused with the essence of saffron and garnished with fresh herbs.',
         price: basePrice,
         ingredients: 'Basmati rice, Chicken (marinated in yogurt and spices), Saffron, Fresh herbs (coriander and mint), Traditional spices (cumin, coriander, garam masala, and more), Caramelized onions, Ghee',
-        packages: [
-          { name: 'PREMIUM',  },
-          { name: 'STANDARD',  },
-          { name: 'LITE',  },
-        ],
+        
         imageUrl: img1, // Add image URL
         reviews: [
           { user: 'John', rating: 5, comment: 'Absolutely delicious! The best Chicken Biryani we have ever had.' },
@@ -87,14 +83,7 @@ const MenuItemDetails = () => {
         <p>{item.description}</p>
         <h2>Ingredients</h2>
         <p>{item.ingredients}</p>
-        <h2>Package Options</h2>
-        <ul>
-          {item.packages.map((pkg, index) => (
-            <li key={index}>
-              {pkg.name}
-            </li>
-          ))}
-        </ul>
+        
         <div className="order-section1">
           <label htmlFor="orderCount">Order Count:</label>
           <input
