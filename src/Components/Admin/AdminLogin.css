@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-login-container9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('./admin.avif') no-repeat center center/cover;
+  }
+  
+  .admin-login-box9 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .admin-login-box9 h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group9 {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group9 label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .form-group9 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-right:0px;
+  }
+  
+  .error-message9 {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
+  .login-button9 {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button9:hover {
+    background-color: #0056b3;
+  }
+  

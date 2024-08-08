@@ -1,0 +1,179 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.custom-order-container {
+  padding-top: 60px; /* To avoid content being hidden behind the fixed header */
+}
+
+/* Header styles */
+.header01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header01 h2 {
+  margin: 0;
+  color: #333;
+}
+
+.navigation01 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation01 a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Container styles */
+.cont1 {
+ 
+  padding: 20px;
+}
+
+.custom-order-page01 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-order-page01:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-order-page01 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Selection card styles */
+.selection-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selection-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.selected {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.selection-card input[type="text"],
+.selection-card input[type="number"],
+.selection-card input[type="date"],
+.selection-card input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.error01 {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styles */
+.bt01 {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color:  #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.bt01:hover {
+  background-color: #e64a19;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+  .custom-order-page01 {
+    padding: 10px;
+  }
+
+  .selection-card h3 {
+    font-size: 16px;
+  }
+
+  .bt01 {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .navigation01 a {
+    margin: 0 5px;
+    padding: 6px 10px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+}

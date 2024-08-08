@@ -1,0 +1,162 @@
+/* Package.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.menu-page2 {
+  padding: 20px;
+}
+
+/* .header2 {
+  background-color:white;
+  color: black;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;  
+  top: 0; 
+  width: 100%;  
+  z-index: 1000;  
+  padding-right:200px;
+  
+  
+} */
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  background-color: white;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+  margin-left:0px;
+}
+
+.header2 h1 {
+  margin: 0;
+}
+
+.navigation2 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation2 a:hover {
+  background-color: #333;
+  color: white;
+}
+.main2{
+  margin-top:50px;
+  
+}
+.head2{
+  margin-bottom:60px;
+}
+
+.header2 .logo2 h2 {
+  margin: 0;
+}
+
+
+
+/* h1 {
+  text-align: center;
+  margin-top: 20px;
+} */
+
+.package-selector2, .filter-selector2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.package-selector2 button, .filter-selector2 button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.package-selector2 button.active, .filter-selector2 button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.package-selector2 button:hover, .filter-selector2 button:hover {
+  background-color: #bbb;
+}
+
+.menu-items2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item2 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.menu-item2:hover {
+  transform: scale(1.05);
+}
+
+.menu-item2 img.menu-item-image2 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item2 h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.menu-item2 p {
+  margin: 5px 0;
+}
+
+.menu-item2 .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-item2 a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn2{
+  background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top:20px;
+}
